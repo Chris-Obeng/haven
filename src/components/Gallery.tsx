@@ -213,9 +213,7 @@ export default function Gallery() {
               loading="lazy"
             />
           </div>
-          <span className="uppercase text-[11px] tracking-[0.25em] text-[#1A1A18]/45">
-            {items[2].caption}
-          </span>
+          {/* Caption removed as requested (HAVEN POOL · EJISU) */}
         </div>
 
       </div>
