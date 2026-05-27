@@ -106,8 +106,7 @@ export default function HorizontalGallery() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#F5F0EB] overflow-hidden"
-      style={{ height: "100svh" }}
+      className="relative bg-[#F5F0EB] overflow-hidden h-[85svh] md:h-[100svh]"
     >
       <div className="flex flex-col h-full pt-12 md:pt-20 pb-0 md:pb-20">
         {/* Header */}

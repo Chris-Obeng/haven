@@ -7,27 +7,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 const items = [
   { icon: Utensils, label: "Haven Restaurant" },
-  { icon: Wifi,     label: "Complimentary WiFi" },
-  { icon: Car,      label: "Airport Transportation" },
-  { icon: Car,      label: "Free Private Parking" },
-  { icon: Wine,     label: "Bar & Lounge" },
-  { icon: Bell,     label: "24-hour Front Desk" },
+  { icon: Wifi, label: "Complimentary WiFi" },
+  { icon: Car, label: "Airport Transportation" },
+  { icon: Car, label: "Free Private Parking" },
+  { icon: Wine, label: "Bar & Lounge" },
+  { icon: Bell, label: "24-hour Front Desk" },
   { icon: Utensils, label: "Room Service" },
-  { icon: Coffee,   label: "Free Breakfast Included" },
+  { icon: Coffee, label: "Free Breakfast Included" },
 ];
 
 export default function Amenities() {
   const sectionRef = useRef<HTMLElement>(null);
-  const labelRef   = useRef<HTMLSpanElement>(null);
+  const labelRef = useRef<HTMLSpanElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const gridRef    = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (labelRef.current) {
         gsap.set(labelRef.current, { opacity: 0, y: 12 });
         gsap.to(labelRef.current, {
-          opacity: 1, y: 0, duration: 0.85, ease: "power3.out",
+          opacity: 1,
+          y: 0,
+          duration: 0.85,
+          ease: "power3.out",
           scrollTrigger: { trigger: sectionRef.current, start: "top 85%" },
         });
       }
@@ -35,19 +38,25 @@ export default function Amenities() {
       if (headingRef.current) {
         gsap.set(headingRef.current, { clipPath: "inset(0 0 100% 0)", y: 22 });
         gsap.to(headingRef.current, {
-          clipPath: "inset(0 0 0% 0)", y: 0,
-          duration: 1.25, ease: "power4.out",
+          clipPath: "inset(0 0 0% 0)",
+          y: 0,
+          duration: 1.25,
+          ease: "power4.out",
           delay: 0.1,
           scrollTrigger: { trigger: sectionRef.current, start: "top 85%" },
         });
       }
 
       if (gridRef.current) {
-        const tiles = gridRef.current.querySelectorAll<HTMLElement>(".amenity-tile");
+        const tiles =
+          gridRef.current.querySelectorAll<HTMLElement>(".amenity-tile");
         tiles.forEach((tile, i) => {
           gsap.set(tile, { opacity: 0, y: 28 });
           gsap.to(tile, {
-            opacity: 1, y: 0, duration: 0.75, ease: "power3.out",
+            opacity: 1,
+            y: 0,
+            duration: 0.75,
+            ease: "power3.out",
             delay: i * 0.07,
             scrollTrigger: { trigger: gridRef.current, start: "top 86%" },
           });
@@ -62,7 +71,7 @@ export default function Amenities() {
     <section
       ref={sectionRef}
       id="amenities"
-      className="py-0 md:py-32 px-5 md:px-20 bg-[#0E2820] text-[#F5F0EB]"
+      className="py-6 md:py-32 px-5 md:px-20 bg-[#0E2820] text-[#F5F0EB]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -77,7 +86,9 @@ export default function Amenities() {
             ref={headingRef}
             className="font-serif font-light text-[clamp(28px,4.5vw,56px)] leading-[1.08]"
           >
-            Everything You Need,<br />Nothing Unnecessary
+            Everything You Need,
+            <br />
+            Nothing Unnecessary
           </h2>
         </div>
 
