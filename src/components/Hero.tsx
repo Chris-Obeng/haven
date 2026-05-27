@@ -42,15 +42,15 @@ export default function Hero() {
       {/* Parallax image wrapper */}
       <div
         ref={imageWrapperRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ willChange: "transform" }}
+        className="absolute inset-0 w-full"
+        style={{ height: "140%", top: "-20%", willChange: "transform" }}
       >
         <picture>
           <source media="(max-width: 767px)" srcSet="/hero_mobile.png" /> {/* Mobile image */}
           <img
             src="/hero.png"
             alt="Haven Boutique Hotel — pool and garden terrace"
-            className="w-full h-full object-contain md:object-cover md:object-[68%_center] md:scale-100"
+            className="w-full h-full object-cover object-[68%_center] scale-[0.94] md:scale-100 md:object-center"
             loading="eager"
             fetchPriority="high"
           />
