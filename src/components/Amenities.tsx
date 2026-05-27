@@ -62,7 +62,7 @@ export default function Amenities() {
     <section
       ref={sectionRef}
       id="amenities"
-      className="py-2 md:py-32 px-5 md:px-20 bg-[#0E2820] text-[#F5F0EB]"
+      className="py-0 md:py-32 px-5 md:px-20 bg-[#0E2820] text-[#F5F0EB]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
