@@ -43,16 +43,16 @@ const photos = [
 ];
 
 export default function HorizontalGallery() {
-  const sectionRef      = useRef<HTMLElement>(null);
-  const trackRef        = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
   const progressFillRef = useRef<HTMLDivElement>(null);
-  const headerRef       = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(1);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const section = sectionRef.current;
-      const track   = trackRef.current;
+      const track = trackRef.current;
       if (!section || !track) return;
 
       const getScrollDist = () =>
@@ -77,7 +77,7 @@ export default function HorizontalGallery() {
 
           const idx = Math.min(
             photos.length,
-            Math.max(1, Math.round(self.progress * (photos.length - 1)) + 1)
+            Math.max(1, Math.round(self.progress * (photos.length - 1)) + 1),
           );
           setCurrentIndex(idx);
         },
@@ -109,8 +109,7 @@ export default function HorizontalGallery() {
       className="relative bg-[#F5F0EB] overflow-hidden"
       style={{ height: "100svh" }}
     >
-      <div className="flex flex-col h-full pt-12 md:pt-20 pb-16 md:pb-20">
-
+      <div className="flex flex-col h-full pt-12 md:pt-20 pb-8 md:pb-20">
         {/* Header */}
         <div
           ref={headerRef}
@@ -128,7 +127,9 @@ export default function HorizontalGallery() {
           <div className="flex flex-col items-end gap-1.5 md:gap-2">
             <span className="font-serif text-[clamp(22px,3vw,42px)] leading-none text-[#1A1A18]/18 tabular-nums">
               {String(currentIndex).padStart(2, "0")}
-              <span className="text-[0.45em] align-middle text-[#1A1A18]/12 mx-1">/</span>
+              <span className="text-[0.45em] align-middle text-[#1A1A18]/12 mx-1">
+                /
+              </span>
               <span className="text-[0.6em] text-[#1A1A18]/12">
                 {String(photos.length).padStart(2, "0")}
               </span>
@@ -147,7 +148,11 @@ export default function HorizontalGallery() {
           <div
             ref={trackRef}
             className="flex gap-3 md:gap-6 h-full will-change-transform"
-            style={{ paddingLeft: "clamp(20px,5vw,80px)", paddingRight: "12vw", width: "max-content" }}
+            style={{
+              paddingLeft: "clamp(20px,5vw,80px)",
+              paddingRight: "12vw",
+              width: "max-content",
+            }}
           >
             {photos.map((photo, i) => (
               <div
@@ -155,7 +160,7 @@ export default function HorizontalGallery() {
                 className="flex-shrink-0 flex flex-col gap-2.5 md:gap-3 h-full"
                 style={{ width: "clamp(220px,72vw,340px)" }}
               >
-                <div className="relative overflow-hidden h-[260px] md:flex-1">
+                <div className="relative overflow-hidden h-[390px] md:flex-1">
                   <img
                     src={photo.src}
                     alt={photo.alt}
@@ -186,7 +191,9 @@ export default function HorizontalGallery() {
       {/* Right-edge gradient */}
       <div
         className="absolute right-0 top-0 bottom-0 w-16 md:w-24 pointer-events-none"
-        style={{ background: "linear-gradient(to left, #F5F0EB 0%, transparent 100%)" }}
+        style={{
+          background: "linear-gradient(to left, #F5F0EB 0%, transparent 100%)",
+        }}
       />
     </section>
   );
