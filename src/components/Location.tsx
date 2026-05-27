@@ -119,13 +119,13 @@ export default function Location() {
         {/* Decorative compass */}
         <div
           ref={mapRef}
-          className="w-full md:w-[48%] flex items-center justify-center py-4 md:py-0"
+          className="w-full md:w-[48%] flex items-center justify-center py-4 md:py-0 md:mt-6"
         >
-          <div className="w-full max-w-[640px]">
+          <div className="w-full max-w-[760px]">
             <iframe
               src="https://www.google.com/maps?q=6.7222861,-1.4932188&z=17&output=embed"
               title="Haven Boutique Hotel location"
-              className="w-full h-[260px] md:h-[360px] rounded-md border-0"
+              className="w-full h-[300px] md:h-[420px] rounded-md border-0"
               loading="lazy"
               aria-hidden="false"
             />
