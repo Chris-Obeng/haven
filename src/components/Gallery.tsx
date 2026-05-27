@@ -16,7 +16,7 @@ const items = [
     caption: "THE GARDEN RESTAURANT",
   },
   {
-    src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1800&q=85",
+    src: "/main_front.png",
     alt: "Haven pool and gardens",
     caption: "HAVEN POOL · EJISU",
   },
