@@ -1,19 +1,19 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Waves, Utensils, Wifi, Car, Leaf, Wine, Bell, Camera } from "lucide-react";
+import { Utensils, Wifi, Car, Wine, Bell, Coffee } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const items = [
-  { icon: Waves,    label: "Pool & Terrace" },
-  { icon: Utensils, label: "Garden Restaurant" },
+  { icon: Utensils, label: "Haven Restaurant" },
   { icon: Wifi,     label: "Complimentary WiFi" },
-  { icon: Car,      label: "Airport Transfers" },
-  { icon: Leaf,     label: "Tropical Gardens" },
+  { icon: Car,      label: "Airport Transportation" },
+  { icon: Car,      label: "Free Private Parking" },
   { icon: Wine,     label: "Bar & Lounge" },
-  { icon: Bell,     label: "Concierge Service" },
-  { icon: Camera,   label: "Cultural Tours" },
+  { icon: Bell,     label: "24-hour Front Desk" },
+  { icon: Utensils, label: "Room Service" },
+  { icon: Coffee,   label: "Free Breakfast Included" },
 ];
 
 export default function Amenities() {
