@@ -121,46 +121,26 @@ export default function Location() {
           ref={mapRef}
           className="w-full md:w-[48%] flex items-center justify-center py-4 md:py-0"
         >
-          <div className="relative w-full max-w-[240px] md:max-w-[360px] aspect-square">
-            {/* Concentric rings */}
-            <div className="absolute inset-0 rounded-full border border-[#1A1A18]/6" />
-            <div className="absolute inset-[12%] rounded-full border border-[#1A1A18]/6" />
-            <div className="absolute inset-[24%] rounded-full border border-[#1A1A18]/8" />
+          <div className="w-full max-w-[640px]">
+            <iframe
+              src="https://www.google.com/maps?q=6.7222861,-1.4932188&z=17&output=embed"
+              title="Haven Boutique Hotel location"
+              className="w-full h-[260px] md:h-[360px] rounded-md border-0"
+              loading="lazy"
+              aria-hidden="false"
+            />
 
-            {/* Cardinal marks */}
-            {["N", "E", "S", "W"].map((dir, i) => {
-              const positions = [
-                "top-2 left-1/2 -translate-x-1/2",
-                "right-2 top-1/2 -translate-y-1/2",
-                "bottom-2 left-1/2 -translate-x-1/2",
-                "left-2 top-1/2 -translate-y-1/2",
-              ];
-              return (
-                <span
-                  key={dir}
-                  className={`absolute ${positions[i]} uppercase text-[8px] md:text-[9px] tracking-[0.2em] text-[#1A1A18]/25 font-sans`}
-                >
-                  {dir}
-                </span>
-              );
-            })}
-
-            {/* Center content */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-              <span className="font-serif italic text-[22px] md:text-[30px] font-light mb-1">Ejisu</span>
-              <span className="uppercase text-[7px] md:text-[9px] tracking-[0.25em] text-[#1A1A18]/40 mb-4 md:mb-5 font-sans">
-                ASHANTI REGION
-              </span>
-              <div className="w-[24px] md:w-[28px] h-[1px] bg-[#C9A96E] mb-4 md:mb-5" />
-              <span className="uppercase text-[8px] md:text-[10px] tracking-[0.18em] text-[#1A1A18]/50 font-sans">
-                6.7° N · 1.5° W
-              </span>
-            </div>
-
-            {/* Pulsing dot */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[-22px] md:mt-[-28px] w-2.5 h-2.5">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#C9A96E]" />
-              <div className="absolute inset-0 rounded-full bg-[#C9A96E]/40 animate-ping" />
+            <div className="mt-4 text-center">
+              <div className="font-serif font-light text-[18px] md:text-[20px]">Haven Boutique Hotel</div>
+              <div className="text-sm text-[#1A1A18]/70">1 Cobbold Drive, Adako Jachie, Ejisu, Kumasi, Ghana</div>
+              <a
+                href="https://maps.google.com/?cid=2497286516822085084"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block text-[#C9A96E] hover:underline"
+              >
+                Get directions
+              </a>
             </div>
           </div>
         </div>
