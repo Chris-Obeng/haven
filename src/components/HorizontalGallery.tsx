@@ -109,7 +109,7 @@ export default function HorizontalGallery() {
       className="relative bg-[#F5F0EB] overflow-hidden"
       style={{ height: "100svh" }}
     >
-      <div className="flex flex-col h-full pt-12 md:pt-20 pb-4 md:pb-20">
+      <div className="flex flex-col h-full pt-12 md:pt-20 pb-2 md:pb-20">
         {/* Header */}
         <div
           ref={headerRef}
