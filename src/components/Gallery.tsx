@@ -6,12 +6,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const items = [
   {
-    src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1000&q=85",
+    src: "/frontdesk.png",
     alt: "Presidential Suite at Haven",
     caption: "PRESIDENTIAL SUITE · HAVEN",
   },
   {
-    src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=85",
+    src: "/dining_space.png",
     alt: "Boutique bathroom suite",
     caption: "THE GARDEN RESTAURANT",
   },
