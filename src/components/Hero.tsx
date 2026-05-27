@@ -46,11 +46,12 @@ export default function Hero() {
         style={{ height: "140%", top: "-20%", willChange: "transform" }}
       >
         <picture>
-          <source media="(max-width: 767px)" srcSet="/hero_mobile.png" /> {/* Mobile image */}
+          <source media="(max-width: 767px)" srcSet="/hero_mobile.png" />{" "}
+          {/* Mobile image */}
           <img
             src="/hero.png"
             alt="Haven Boutique Hotel — pool and garden terrace"
-            className="w-full h-full object-cover object-[68%_center] scale-[0.94] md:scale-100 md:object-center"
+            className="w-full h-full object-cover object-right md:object-[68%_center] scale-[0.94] md:scale-100 md:object-center"
             loading="eager"
             fetchPriority="high"
           />
