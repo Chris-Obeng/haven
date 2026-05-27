@@ -167,9 +167,7 @@ export default function HorizontalGallery() {
                     {photo.index}
                   </span>
                 </div>
-                <span className="uppercase text-[8px] md:text-[9px] tracking-[0.28em] text-[#1A1A18]/38 font-sans pb-1">
-                  {photo.caption}
-                </span>
+                {/* Caption removed as requested */}
               </div>
             ))}
           </div>
