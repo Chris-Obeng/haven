@@ -155,7 +155,7 @@ export default function HorizontalGallery() {
                 className="flex-shrink-0 flex flex-col gap-2.5 md:gap-3 h-full"
                 style={{ width: "clamp(220px,72vw,340px)" }}
               >
-                <div className="relative overflow-hidden h-[220px] md:flex-1">
+                <div className="relative overflow-hidden h-[260px] md:flex-1">
                   <img
                     src={photo.src}
                     alt={photo.alt}
